@@ -1,7 +1,15 @@
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import Projects from "@/components/sections/Projects";
+
 export default function Home() {
   return (
-    <main>
-      Software Engineer Portfolio
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+      </main>
+    </>
   );
 }
