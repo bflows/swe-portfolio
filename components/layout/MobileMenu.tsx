@@ -45,7 +45,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Buttons */}
       <div className="mt-8 flex items-center gap-x-2">
         <div>
-          <Link href="/" className="px-3 py-2 bg-primary/20 text-primary rounded-lg flex items-center gap-x-2 w-fit">
+          <Link
+            href="/files/billy-flowers-resume.pdf"
+            passHref
+            target="_blank"
+            className="px-3 py-2 bg-primary/20 text-primary rounded-lg flex items-center gap-x-2 w-fit"
+          >
             <div>
               <LuFileText className="size-6" />
             </div>
@@ -53,7 +58,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
         </div>
         <div>
-          <Link href="/" className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300">
+          <Link
+            href="https://www.linkedin.com/in/billyflowers/"
+            passHref
+            target="_blank"
+            className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300"
+          >
             <div>
               <BiLogoLinkedin className="size-6" />
             </div>
@@ -61,7 +71,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
         </div>
         <div>
-          <Link href="/" className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300">
+          <Link 
+            href="https://github.com/flowz0" 
+            passHref
+            target="_blank"
+            className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300"
+          >
             <div>
               <BiLogoGithub className="size-6" />
             </div>
