@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { LuFileText } from "react-icons/lu";
+import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,6 +19,8 @@ type MobileMenuProps = {
 };
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  useLockBodyScroll(isOpen);
+
   if (!isOpen) return null;
 
   return (
