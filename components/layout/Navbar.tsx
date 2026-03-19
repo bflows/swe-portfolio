@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { LuMenu, LuX } from "react-icons/lu";
+import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 
@@ -34,9 +34,9 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: Nav Links */}
-          <div className="hidden p-1 md:block">
+          <div className="hidden items-center md:flex">
             {navLinks.map(({ href, label }) => (
-              <Link key={href} href={href} className="px-3 py-2 rounded-xl text-brand600 hover:bg-brand200">
+              <Link key={href} href={href} className="text-p px-3 py-2 rounded-xl text-brand600 hover:bg-brand200/50">
                 {label}
               </Link>
             ))}
@@ -44,9 +44,19 @@ export default function Navbar() {
 
           {/* Desktop: Other Links */}
           <div className="hidden lg:flex">
-            <Link href="/">
-              View CV
-            </Link>
+            <div>
+              <Link
+                href="/files/billy-flowers-resume.pdf"
+                passHref
+                target="_blank"
+                className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit outline-1 transition-colors duration-300 ease-in-out bg-brand200/50 text-brand600 outline-brand200 hover:bg-brand200 hover:text-brand800 hover:outline-brand300"
+              >
+                <div>
+                  <LuFileText className="size-6" />
+                </div>
+                <span className="text-p">View CV</span>
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu */}
