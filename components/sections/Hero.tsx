@@ -11,12 +11,12 @@ export default function Hero() {
         Software Engineer
       </h2>
       {/* Buttons */}
-      <div className="mt-8 flex gap-x-4">
-        <Link href="#projects" className="bg-primary text-brand100 text-center py-3 px-6 rounded-lg w-1/2">
-          View Projects
+      <div className="mt-8 flex items-center justify-center gap-x-4">
+        <Link href="#projects" className="bg-primary text-brand100 text-center py-3 px-4 rounded-lg w-1/2 sm:w-fit sm:px-6">
+          Explore Projects
         </Link>
-        <Link href="#cv" className="bg-brand200 text-brand800 text-center py-3 px-6 rounded-lg w-1/2 border border-brand300">
-          Show CV
+        <Link href="/files/billy-flowers-resume.pdf" target="_blank" className="bg-brand200 text-brand800 text-center py-3 px-4 rounded-lg w-1/2 border border-brand300 sm:w-fit sm:px-6">
+          View Resume
         </Link>
       </div>
       {/* Arrow */}
