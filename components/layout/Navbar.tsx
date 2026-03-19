@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
@@ -15,10 +15,47 @@ export const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleInteractionOutside = (target: EventTarget | null) => {
+      if (!(target instanceof Node)) return;
+      if (navRef.current?.contains(target)) return;
+      if (menuRef.current?.contains(target)) return;
+      setMenuOpen(false);
+    };
+
+    const handlePointerDown = (event: PointerEvent) => {
+      handleInteractionOutside(event.target);
+    };
+
+    const handleFocusIn = (event: FocusEvent) => {
+      handleInteractionOutside(event.target);
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("focusin", handleFocusIn);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("focusin", handleFocusIn);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [menuOpen]);
 
   return (
     <>
-      <nav className="fixed h-20 z-50 left-4 right-4 top-4 px-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
+      <nav ref={navRef} className="fixed h-20 z-50 left-4 right-4 top-4 px-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
         <div className="flex items-center justify-between h-full">
           <Link href="/" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
             {"<flowz />"}
@@ -57,7 +94,11 @@ export default function Navbar() {
         </div>
 
       </nav>
-      <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        menuRef={menuRef}
+      />
     </>
   );
 }
