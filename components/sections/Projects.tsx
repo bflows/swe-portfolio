@@ -3,7 +3,7 @@ import ProjectGrid from "../project/ProjectGrid";
 
 export default function Projects() {
   return (
-    <SectionContainer>
+    <SectionContainer id="projects">
       <div>
         <h2 className="text-brand950 text-h5 font-bold sm:text-h2">
           Featured Projects
