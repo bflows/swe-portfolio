@@ -9,7 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed left-6 right-6 top-6 py-4 px-4 rounded-2xl border bg-brand100 border-brand300">
+    <nav className="fixed left-6 right-6 top-6 py-4 px-4 rounded-2xl border backdrop-blur-sm bg-brand100/90 border-brand300">
       <div className="flex items-center justify-between">
         <Link href="/" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
           {"<flowz />"}
