@@ -4,14 +4,7 @@ import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { LuFileText } from "react-icons/lu";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#skills", label: "Skills" },
-  { href: "/#about", label: "About" },
-  { href: "/#Experience", label: "Experience" },
-];
+import { navLinks } from "./Navbar";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -24,9 +17,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div>
+    <div className="fixed left-4 right-4 top-25 px-6 py-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
       <div
-        className="flex flex-col gap-y-1 mt-4"
+        className="flex flex-col gap-y-1"
         role="menu"
       >
         {navLinks.map(({ href, label }) => (
@@ -34,7 +27,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             key={href}
             href={href}
             onClick={onClose}
-            className="py-1 px-3 w-fit rounded-lg text-brand600 hover:bg-brand200"
+            className="text-p py-1 px-3 w-fit rounded-lg text-brand600 hover:bg-brand200"
             role="menuitem"
           >
             {label}
@@ -54,7 +47,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <div>
               <LuFileText className="size-6" />
             </div>
-            View CV
+            <span className="text-p">View CV</span>
           </Link>
         </div>
         <div>
