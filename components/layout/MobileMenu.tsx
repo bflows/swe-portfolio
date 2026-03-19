@@ -49,7 +49,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             href="/files/billy-flowers-resume.pdf"
             passHref
             target="_blank"
-            className="px-3 py-2 bg-primary/20 text-primary rounded-lg flex items-center gap-x-2 w-fit"
+            className="px-3 py-2 bg-primary/20 text-primary rounded-lg flex items-center gap-x-2 w-fit outline-1 outline-primary/40"
           >
             <div>
               <LuFileText className="size-6" />
