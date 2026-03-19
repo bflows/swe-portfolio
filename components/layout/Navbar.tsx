@@ -5,32 +5,59 @@ import Link from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 
+export const navLinks = [
+  { href: "/#home", label: "Home" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#about", label: "About" },
+  { href: "/#Experience", label: "Experience" },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed left-6 right-6 top-6 py-4 px-4 rounded-2xl border backdrop-blur-sm bg-brand100/90 border-brand300">
-      <div className="flex items-center justify-between">
-        <Link href="/" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
-          {"<flowz />"}
-        </Link>
+    <>
+      <nav className="fixed h-20 z-50 left-4 right-4 top-4 px-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
+        <div className="flex items-center justify-between h-full">
+          <Link href="/" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
+            {"<flowz />"}
+          </Link>
 
-        <button
-          type="button"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="p-1 rounded-lg transition-colors text-brand600 hover:bg-brand200/40 focus:outline-primary"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? (
-            <LuX className="size-8" />
-          ) : (
-            <LuMenu className="size-8" />
-          )}
-        </button>
-      </div>
+          {/* Desktop: Nav Links */}
+          <div className="hidden p-1 md:block">
+            {navLinks.map(({ href, label }) => (
+              <Link key={href} href={href} className="px-3 py-2 rounded-xl text-brand600 hover:bg-brand200">
+                {label}
+              </Link>
+            ))}
+          </div>
 
+          {/* Desktop: Other Links */}
+          <div className="hidden lg:flex">
+            <Link href="/">
+              View CV
+            </Link>
+          </div>
+
+          {/* Mobile Menu */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="p-1 rounded-lg transition-colors text-brand600 md:hidden hover:bg-brand200/40 focus:outline-primary"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? (
+              <LuX className="size-8" />
+            ) : (
+              <LuMenu className="size-8" />
+            )}
+          </button>
+        </div>
+
+      </nav>
       <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-    </nav>
+    </>
   );
 }
