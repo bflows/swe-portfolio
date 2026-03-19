@@ -7,9 +7,9 @@ export default function ProjectCard() {
   return (
     <div className="px-4 py-4 rounded-2xl border bg-brand100 border-brand200">
       <div className="flex items-start justify-between gap-x-1">
-        <h2 className="text-h6 font-bold text-brand950">
+        <h3 className="text-h6 font-bold text-brand950">
           HVAC Blog Content Management System
-        </h2>
+        </h3>
         <ProjectStatus />
       </div>
       <p className="mt-2 text-p text-brand800">
