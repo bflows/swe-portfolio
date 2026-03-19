@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
+import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 
 export const navLinks = [
   { href: "/#home", label: "Home" },
@@ -18,40 +19,11 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (!menuOpen) return;
-
-    const handleInteractionOutside = (target: EventTarget | null) => {
-      if (!(target instanceof Node)) return;
-      if (navRef.current?.contains(target)) return;
-      if (menuRef.current?.contains(target)) return;
-      setMenuOpen(false);
-    };
-
-    const handlePointerDown = (event: PointerEvent) => {
-      handleInteractionOutside(event.target);
-    };
-
-    const handleFocusIn = (event: FocusEvent) => {
-      handleInteractionOutside(event.target);
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("focusin", handleFocusIn);
-    document.addEventListener("keydown", handleEscape);
-
-    return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("focusin", handleFocusIn);
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [menuOpen]);
+  useDismissInteraction({
+    isActive: menuOpen,
+    refs: [navRef, menuRef],
+    onDismiss: () => setMenuOpen(false),
+  });
 
   return (
     <>
