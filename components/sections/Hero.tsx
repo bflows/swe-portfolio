@@ -12,10 +12,17 @@ export default function Hero() {
       </h2>
       {/* Buttons */}
       <div className="mt-8 flex items-center justify-center gap-x-4">
-        <Link href="#projects" className="bg-primary text-brand100 text-center py-3 px-4 rounded-lg w-1/2 sm:w-fit sm:px-6">
+        <Link
+          href="#projects"
+          className="text-center py-3 px-4 rounded-lg w-1/2 border bg-primary/20 text-primary border-primary/20 sm:w-fit sm:px-6"
+        >
           Explore Projects
         </Link>
-        <Link href="/files/billy-flowers-resume.pdf" target="_blank" className="bg-brand200 text-brand800 text-center py-3 px-4 rounded-lg w-1/2 border border-brand300 sm:w-fit sm:px-6">
+        <Link
+          href="/files/billy-flowers-resume.pdf"
+          target="_blank"
+          className="text-center py-3 px-4 rounded-lg w-1/2 border bg-brand200/40 text-brand600 border-brand200 sm:w-fit sm:px-6"
+        >
           View Resume
         </Link>
       </div>
