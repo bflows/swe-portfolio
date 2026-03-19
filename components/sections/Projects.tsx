@@ -8,7 +8,7 @@ export default function Projects() {
         <h2 className="text-brand950 text-h5 font-bold sm:text-h2">
           Featured Projects
         </h2>
-        <p className="text-brand800 text-p mt-4">
+        <p className="text-brand800 text-p mt-4 max-w-120">
           A selection of projects that showcase my skills in building scalable and impactful web solutions.
         </p>
       </div>
