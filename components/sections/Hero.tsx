@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { LuChevronDown } from "react-icons/lu";
 import Button from "../ui/Button";
 
@@ -16,13 +15,9 @@ export default function Hero() {
         <Button href="/#projects">
           Explore Projects
         </Button>
-        <Link
-          href="/files/billy-flowers-resume.pdf"
-          target="_blank"
-          className="text-center py-3 px-4 rounded-lg w-1/2 border bg-brand200/20 text-brand600 border-brand200/80 sm:w-fit sm:px-6"
-        >
+        <Button variant="secondary" href="/files/billy-flowers-resume.pdf" target="_blank">
           View Resume
-        </Link>
+        </Button>
       </div>
       {/* Arrow */}
       <div className="flex flex-col items-center mt-64">
