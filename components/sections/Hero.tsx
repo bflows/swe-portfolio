@@ -11,7 +11,7 @@ export default function Hero() {
         Software Engineer
       </h2>
       {/* Buttons */}
-      <div className="mt-8 flex items-center justify-center gap-x-4">
+      <div className="mt-8 flex items-center justify-center gap-x-2 sm:gap-x-4">
         <Button href="/#projects">
           Explore Projects
         </Button>
