@@ -7,6 +7,7 @@ type ButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
   href?: string;
+  target?: string;
   className?: string;
 };
 
@@ -16,20 +17,21 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-primary/10 text-primary/80 border-primary/20 hover:bg-primary/20 hover:text-primary hover:border-primary/40",
   secondary:
-    "bg-white/5 text-white/80 border-white/20 hover:bg-white/10 hover:text-white hover:border-white/30"
+    "bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
 };
 
 export default function Button({
   children,
   variant = "primary",
   href,
+  target,
   className,
 }: ButtonProps) {
   const classes = `${baseStyle} ${variantStyles[variant]} ${className}`.trim();
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} target={target} className={classes}>
         {children}
       </Link>
     );
