@@ -11,7 +11,7 @@ type ButtonProps = {
   className?: string;
 };
 
-const baseStyle = "flex items-center justify-center gap-x-2 py-3 px-4 rounded-lg w-1/2 border transition-colors duration-300 ease-in-out sm:w-fit sm:px-6";
+const baseStyle = "flex items-center justify-center text-center gap-x-2 py-3 px-4 rounded-lg w-1/2 border transition-colors duration-300 ease-in-out sm:w-fit sm:px-6";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
