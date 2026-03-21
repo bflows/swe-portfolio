@@ -1,4 +1,6 @@
 import SectionContainer from "../layout/SectionContainer";
+import SkillCategory from "../skills/SkillCategory";
+import { skillCategories } from "@/data/skills";
 
 export default function Skills() {
   return (
@@ -10,6 +12,21 @@ export default function Skills() {
         <p className="text-brand800 text-p mt-4 text-center">
           The languages, frameworks, and tools I use to build modern web solutions.
         </p>
+      </div>
+      <div className="mt-12 -mx-4 flex items-stretch snap-x snap-mandatory overflow-x-auto scroll-px-4 px-4 sm:mx-0 sm:grid sm:scroll-px-0 sm:px-0 sm:snap-none sm:items-stretch gap-x-5 gap-y-4 grid-cols-2 lg:grid-cols-3">
+        {skillCategories.map((skill, index) => (
+          <div
+            key={index}
+            className="flex min-h-0 min-w-full flex-col snap-center sm:min-w-0 sm:w-auto"
+          >
+            <SkillCategory
+              title={skill.title}
+              Icon={skill.Icon}
+              skills={skill.skills}
+              color={skill.color}
+            />
+          </div>
+        ))}
       </div>
     </SectionContainer>
   );
