@@ -1,8 +1,8 @@
-import Link from "next/link";
 import ProjectStatus from "./ProjectStatus";
 import ProjectTechList from "./ProjectTechList";
 import { LuGithub, LuPlay } from "react-icons/lu";
 import { Project } from "@/types/project";
+import Button from "../ui/Button";
 
 export default function ProjectCard({
   title,
@@ -27,20 +27,20 @@ export default function ProjectCard({
       <hr className="border-t-brand200 mt-6" />
       <div className="mt-4 flex items-center justify-end gap-x-2">
         {liveUrl && (
-          <Link href={liveUrl} className="px-3 py-1 flex items-center gap-x-2 w-fit rounded-full border text-brand100 bg-primary">
+          <Button href={liveUrl} target="_blank" rounded="full" size="sm">
             <div>
               <LuPlay className="size-4" />
             </div>
             Live Demo
-          </Link>
+          </Button>
         )}
         {githubUrl && (
-          <Link href={githubUrl} className="px-3 py-1 flex items-center gap-x-2 w-fit rounded-full border text-brand600 bg-brand200 border-brand300">
+          <Button href={githubUrl} target="_blank" variant="secondary" rounded="full" size="sm">
             <div>
               <LuGithub className="size-4" />
             </div>
             Code
-          </Link>
+          </Button>
         )}
       </div>
     </div>
