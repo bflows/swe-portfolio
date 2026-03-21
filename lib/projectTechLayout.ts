@@ -26,8 +26,8 @@ export type TechStackSplit = {
 };
 
 /**
- * Chooses how many tech chips to show so the row fits in at most two lines,
- * accounting for the real width of a "+N more" chip.
+ * Chooses how many tech cards to show so the row fits in at most two lines,
+ * accounting for the real width of a "+N more" card.
  */
 export function computeTechStackSplit(
   techWidths: number[],
