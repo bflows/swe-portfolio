@@ -6,6 +6,7 @@ import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 import { getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
+import Button from "../ui/Button";
 
 export const navLinks = [
   { href: "/#home", label: "Home" },
@@ -57,17 +58,12 @@ export default function Navbar() {
           {/* Desktop: Other Links */}
           <div className="hidden lg:flex">
             <div>
-              <Link
-                href="/files/billy-flowers-resume.pdf"
-                passHref
-                target="_blank"
-                className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit outline-1 transition-colors duration-300 ease-in-out bg-brand200/50 text-brand600 outline-brand200 hover:bg-brand200 hover:text-brand800 hover:outline-brand300"
-              >
+              <Button href="/files/billy-flowers-resume.pdf" target="_blank" variant="secondary">
                 <div>
                   <LuFileText className="size-6" />
                 </div>
                 <span className="text-p">View CV</span>
-              </Link>
+              </Button>
             </div>
           </div>
 
