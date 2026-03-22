@@ -6,14 +6,14 @@ export default function Skills() {
   return (
     <SectionContainer id="skills">
       <div>
-        <h2 className="text-brand950 text-h4 font-bold text-center sm:text-h2">
+        <h2 className="text-h4 font-bold text-center bg-linear-to-r bg-clip-text text-transparent from-[#51f0e3] to-brand950 from-35% to-40% sm:text-h2">
           Skills & Technologies
         </h2>
         <p className="text-brand800 text-p mt-4 text-center">
           The languages, frameworks, and tools I use to build modern web solutions.
         </p>
       </div>
-      <div className="mt-12 -mx-4 flex items-stretch snap-x snap-mandatory overflow-x-auto scroll-px-4 px-4 gap-x-2 sm:mx-0 sm:grid sm:scroll-px-0 sm:px-0 sm:snap-none sm:items-stretch sm:gap-x-4 gap-y-4 grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 -mx-4 flex items-stretch snap-x snap-mandatory overflow-x-auto scroll-px-4 px-4 pb-2 gap-x-2 sm:mx-0 sm:grid sm:scroll-px-0 sm:px-0 sm:pb-0 sm:snap-none sm:items-stretch sm:gap-x-4 gap-y-4 grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((skill, index) => (
           <div
             key={index}
