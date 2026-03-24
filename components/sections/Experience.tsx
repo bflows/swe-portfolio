@@ -4,7 +4,7 @@ import ExperienceCard from "../experience/ExperienceCard";
 
 export default function Experience() {
   return (
-    <SectionContainer>
+    <SectionContainer id="experience">
       <div>
         <h2 className="text-h4 font-bold text-center bg-linear-to-r bg-clip-text text-transparent from-[#51f0e3] to-brand950 from-35% to-40% sm:text-h2 md:from-40% md:to-45%">
           Work Experience
