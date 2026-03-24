@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 export default function Hero() {
   return (
     <div id="home" className="mt-64 px-4 scroll-mt-64 md:px-6">
-      <h1 className="font-bold text-h3 text-center bg-linear-to-b bg-clip-text text-transparent from-brand950 to-[#51f0e3] from-30% to-70% sm:text-h1 md:from-40% md:to-70%">
+      <h1 className="font-bold text-h3 text-center text-brand950 sm:text-h1">
         Billy Flowers
       </h1>
       <h2 className="text-primary font-bold text-h6 text-center mt-4">
