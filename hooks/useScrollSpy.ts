@@ -25,11 +25,11 @@ export type UseScrollSpyParams = {
   enabled?: boolean;
 };
 
-const DEFAULT_ACTIVE_SECTION_OFFSET_PX = 250;
+export const ACTIVE_SECTION_OFFSET_PX = 500;
 
 export function useScrollSpy({
   sectionHrefs,
-  activeSectionOffsetPx = DEFAULT_ACTIVE_SECTION_OFFSET_PX,
+  activeSectionOffsetPx = ACTIVE_SECTION_OFFSET_PX,
   enabled = true,
 }: UseScrollSpyParams) {
   const sectionIds = useMemo(
