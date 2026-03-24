@@ -7,7 +7,8 @@ export default function ExperienceCard({
   date,
   summary,
   tags,
-  leftCol
+  leftCol,
+  isActive = false,
 }: ExperienceCardProps) {
   return (
     <div>
@@ -48,7 +49,11 @@ export default function ExperienceCard({
           </article>
         </div>
 
-        <div className="absolute top-1/2 left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary md:left-1/2" />
+        <div
+          className={`absolute top-1/2 left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-300 md:left-1/2 ${
+            isActive ? "bg-primary" : "bg-primary/20"
+          }`}
+        />
       </div>
     </div>
   );
