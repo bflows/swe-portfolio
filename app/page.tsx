@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <Experience />
       </main>
+      <Footer />
     </>
   );
 }
