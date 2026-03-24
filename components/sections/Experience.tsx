@@ -6,7 +6,11 @@ import SectionContainer from "../layout/SectionContainer";
 import ExperienceCard from "../experience/ExperienceCard";
 
 export default function Experience() {
-  const { activeIndex, setCardRef } = useExperienceScrollSpy({ itemCount: experiences.length });
+  const { activeIndex, setCardRef } = useExperienceScrollSpy({
+    itemCount: experiences.length,
+    mobileThreshold: 0.12,
+    desktopThreshold: 0.22,
+  });
 
   return (
     <SectionContainer id="experience">
