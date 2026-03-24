@@ -20,7 +20,7 @@ export default function ExperienceCard({
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-x-2">
               <h3 className="text-h6 font-semibold text-brand950">{title}</h3>
               <div className="mt-2 flex items-center gap-x-1 text-brand600 md:mt-0">
-                <div>
+                <div className="md:hidden">
                   <LuCalendar className="size-4" />
                 </div>
                 <p className="text-sm">
