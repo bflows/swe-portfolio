@@ -1,8 +1,13 @@
+"use client";
+
 import { experiences } from "@/data/experiences";
+import { useExperienceScrollSpy } from "@/hooks/useExperienceScrollSpy";
 import SectionContainer from "../layout/SectionContainer";
 import ExperienceCard from "../experience/ExperienceCard";
 
 export default function Experience() {
+  const { activeIndex, setCardRef } = useExperienceScrollSpy({ itemCount: experiences.length });
+
   return (
     <SectionContainer id="experience">
       <div>
@@ -21,15 +26,23 @@ export default function Experience() {
             const isLeftColumn = index % 2 === 0;
 
             return (
-              <ExperienceCard
+              <div
                 key={index}
-                title={experience.title}
-                company={experience.company}
-                date={experience.date}
-                summary={experience.summary}
-                tags={experience.tags}
-                leftCol={isLeftColumn}
-              />
+                data-index={index}
+                ref={(element) => {
+                  setCardRef(index, element);
+                }}
+              >
+                <ExperienceCard
+                  title={experience.title}
+                  company={experience.company}
+                  date={experience.date}
+                  summary={experience.summary}
+                  tags={experience.tags}
+                  leftCol={isLeftColumn}
+                  isActive={activeIndex === index}
+                />
+              </div>
             );
           })}
         </div>
