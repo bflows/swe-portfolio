@@ -6,7 +6,7 @@ import { LuFileText } from "react-icons/lu";
 import { RefObject, useMemo } from "react";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { navLinks } from "./Navbar";
-import { getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
+import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -20,7 +20,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
   const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
   const { activeSectionId } = useScrollSpy({
     sectionHrefs,
-    activeSectionOffsetPx: 250,
+    activeSectionOffsetPx: ACTIVE_SECTION_OFFSET_PX,
     enabled: isOpen,
   });
 

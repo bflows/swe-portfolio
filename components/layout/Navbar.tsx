@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
-import { getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
+import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 import Button from "../ui/Button";
 
 export const navLinks = [
@@ -22,7 +22,7 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
-  const { activeSectionId } = useScrollSpy({ sectionHrefs, activeSectionOffsetPx: 250, enabled: true });
+  const { activeSectionId } = useScrollSpy({ sectionHrefs, activeSectionOffsetPx: ACTIVE_SECTION_OFFSET_PX, enabled: true });
 
   useDismissInteraction({
     isActive: menuOpen,
