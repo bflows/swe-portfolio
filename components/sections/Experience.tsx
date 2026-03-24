@@ -16,7 +16,7 @@ export default function Experience() {
       <div className="relative mt-12">
         <div className="absolute top-0 bottom-0 left-0 w-px bg-brand200 md:left-1/2 md:-translate-x-1/2" />
 
-        <div className="flex flex-col gap-y-8 md:block">
+        <div className="flex flex-col gap-y-4 md:gap-y-16">
           {experiences.map((experience, index) => {
             const isLeftColumn = index % 2 === 0;
 
