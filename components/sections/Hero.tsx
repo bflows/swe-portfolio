@@ -20,7 +20,7 @@ export default function Hero() {
         </Button>
       </div>
       {/* Arrow */}
-      <div className="flex flex-col items-center mt-64">
+      <div className="flex flex-col items-center mt-32 lg:mt-64">
         <p className="text-brand400 uppercase">SCROLL</p>
         <div className="mt-4">
           <LuChevronDown className="text-primary size-8 transition-transform animate-bounce ease-in-out duration-300" />
