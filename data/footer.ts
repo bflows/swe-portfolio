@@ -26,11 +26,6 @@ export const quickLinks: QuickLinkType[] = [
 
 export const contactLinks: ContactLinkType[] = [
   {
-    label: "linkedin.com/in/billyflowers",
-    href: "https://www.linkedin.com/in/billyflowers",
-    Icon: BiLogoLinkedin
-  },
-  {
     label: "billylflowers@gmail.com",
     href: "mailto:billylflowers@gmail.com",
     Icon: BiSolidInbox
@@ -40,5 +35,10 @@ export const contactLinks: ContactLinkType[] = [
     href: "https://github.com/flowz0",
     Icon: BiLogoGithub,
     primary: true
+  },
+  {
+    label: "/billyflowers",
+    href: "https://www.linkedin.com/in/billyflowers",
+    Icon: BiLogoLinkedin
   },
 ];
