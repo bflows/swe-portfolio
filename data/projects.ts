@@ -14,9 +14,9 @@ export const projects: Project[] = [
     id: 1,
     title: "Software Engineer Portfolio",
     desc: "Designed and built a high-performance portfolio using Next.js, featuring a scalable component architecture, accessible UI, and optimized performance for a seamless user experience.",
-    status: "building",
+    status: "live",
     techStack: ['TypeScript', 'Next.js', 'Axios', 'Tailwind CSS', 'Express', 'MongoDB', 'Node.js'],
-    // liveUrl: "",
+    liveUrl: "https://billyf-portfolio.vercel.app/",
     githubUrl: "https://github.com/flowz0/swe-portfolio"
   },
   {
