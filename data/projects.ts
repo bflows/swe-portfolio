@@ -3,8 +3,9 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 0,
-    title: "HVAC Blog Content Management System",
-    desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
+    title: "HVAC Blog CMS",
+    // desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
+    desc: "Created a content management system to blog for an HVAC company. Custom dashboard to post, update, and view blog posts.",
     status: "live",
     techStack: ['TypeScript', 'Next.js', 'Axios', 'Tailwind CSS', 'Express', 'MongoDB', 'Node.js'],
     liveUrl: "https://www.ductdaddykc.com/blog",
@@ -13,16 +14,18 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Software Engineer Portfolio",
-    desc: "Designed and built a high-performance portfolio using Next.js, featuring a scalable component architecture, accessible UI, and optimized performance for a seamless user experience.",
+    // desc: "Designed and built a high-performance portfolio using Next.js, featuring a scalable component architecture, accessible UI, and optimized performance for a seamless user experience.",
+    desc: "Designed and developed a responsive portfolio using modern technologies like Next.js to showcase my skills and experience.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Axios', 'Tailwind CSS', 'Express', 'MongoDB', 'Node.js'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS'],
     liveUrl: "https://billyf-portfolio.vercel.app/",
     githubUrl: "https://github.com/flowz0/swe-portfolio"
   },
   {
     id: 2,
-    title: "Field Service Management Platform",
-    desc: "Built a full-stack field service platform to streamline dispatching, scheduling, CRM, and payments, replacing third-party tools with a faster, more intuitive system for office staff and technicians.",
+    title: "Field Service Platform",
+    // desc: "Built a full-stack field service platform to streamline dispatching, scheduling, CRM, and payments, replacing third-party tools with a faster, more intuitive system for office staff and technicians.",
+    desc: "Built a field service platform to streamline dispatching, scheduling, CRM, payments, and other business operations efficiently.",
     status: "building",
     techStack: ['TypeScript', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Express', 'PostgreSQL', 'Prisma ORM', 'Node.js', 'Stripe', 'Twilio Messaging API'],
     // liveUrl: "",
