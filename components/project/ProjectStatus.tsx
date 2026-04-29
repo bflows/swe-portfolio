@@ -11,7 +11,7 @@ const STATUS: Record<
   building: {
     label: "Building",
     Icon: LuCircleDotDashed,
-    className: "text-building bg-brand100 border-brand200",
+    className: "text-building bg-brand100 border-building/40",
   },
   live: {
     label: "Live",
