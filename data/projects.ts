@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 0,
     title: "HVAC Blog CMS",
-    desc: "Created a content management system to blog for an HVAC company. Custom dashboard to post, update, and view blog posts.",
+    desc: "Created a blog content management system for an HVAC company. Allows the company to post content, update posts, and manage their blog.",
     status: "live",
     techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
     liveUrl: "https://www.ductdaddykc.com/blog",
@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Software Engineer Portfolio",
-    desc: "Designed and developed a responsive portfolio using modern technologies like Next.js to showcase my skills and experience.",
+    desc: "Designed and developed a responsive portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
     status: "live",
     techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel'],
     liveUrl: "https://billyf-portfolio.vercel.app/",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Field Service Platform",
-    desc: "Built a field service platform to streamline dispatching, scheduling, CRM, payments, and other business operations efficiently.",
+    desc: "Built a field-service platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
     status: "building",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     // liveUrl: "",
