@@ -39,8 +39,8 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
             onClick={onClose}
             className={
               activeSectionId === getSectionIdFromHref(href)
-                ? "text-p py-1 px-3 w-fit rounded-lg bg-primary/20 text-primary ring-1 ring-primary/40"
-                : "text-p py-1 px-3 w-fit rounded-lg text-brand600 hover:bg-brand200"
+                ? "text-p py-1 px-3 w-fit rounded-full bg-primary/20 text-primary ring-1 ring-primary/40"
+                : "text-p py-1 px-3 w-fit rounded-full text-brand600 hover:bg-brand200"
             }
             role="menuitem"
           >
@@ -56,7 +56,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
             href="/files/billy-flowers-resume.pdf"
             passHref
             target="_blank"
-            className="px-3 py-2 bg-primary/20 text-primary rounded-lg flex items-center gap-x-2 w-fit outline-1 outline-primary/40"
+            className="px-4 py-2 bg-primary/20 text-primary rounded-full flex items-center gap-x-2 w-fit outline-1 outline-primary/40"
           >
             <div>
               <LuFileText className="size-6" />
@@ -69,7 +69,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
             href="https://www.linkedin.com/in/billyflowers/"
             passHref
             target="_blank"
-            className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300"
+            className="p-2 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/40 text-brand600 border-brand200"
           >
             <div>
               <BiLogoLinkedin className="size-6" />
@@ -82,7 +82,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
             href="https://github.com/flowz0" 
             passHref
             target="_blank"
-            className="px-3 py-2 rounded-lg flex items-center gap-x-2 w-fit border bg-brand200 text-brand600 border-brand300"
+            className="p-2 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/40 text-brand600 border-brand200"
           >
             <div>
               <BiLogoGithub className="size-6" />

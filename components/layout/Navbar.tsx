@@ -86,7 +86,7 @@ export default function Navbar() {
             <span
               ref={indicatorRef}
               aria-hidden
-              className="pointer-events-none absolute rounded-xl bg-primary/20 opacity-0 ring-1 ring-primary/40 transition-[left,top,width,height,opacity] duration-300 ease-in-out"
+              className="pointer-events-none absolute rounded-full bg-primary/20 opacity-0 ring-1 ring-primary/40 transition-[left,top,width,height,opacity] duration-300 ease-in-out"
             />
             {navLinks.map(({ href, label }, index) => {
               const isActive = activeSectionId === getSectionIdFromHref(href);
