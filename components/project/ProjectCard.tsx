@@ -22,7 +22,7 @@ export default function ProjectCard({
             </h3>
             <ProjectStatus status={status} />
           </div>
-          <p className="mt-2 text-p text-brand800">
+          <p className="mt-2 text-p line-clamp-3 text-brand800">
             {desc}
           </p>
           <ProjectTechList techStack={techStack} />
