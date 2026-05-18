@@ -47,7 +47,7 @@ export default function Navbar() {
                 className={`transition-colors duration-300 ease-in-out ${
                   activeSectionId === getSectionIdFromHref(href)
                     ? "text-p px-3 py-2 rounded-xl bg-primary/20 text-primary ring-1 ring-primary/40"
-                    : "text-p px-3 py-2 rounded-xl text-brand600 hover:bg-brand200/50"
+                    : "text-p px-3 py-2 rounded-xl text-brand400 hover:bg-brand200/50 hover:text-brand600"
                 }`}
               >
                 {label}
