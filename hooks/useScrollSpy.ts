@@ -2,6 +2,57 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+/** Shared across hook instances — suppresses intermediate highlights while scrolling to a clicked section. */
+let navigationLockId: string | null = null;
+let navClickListenerAttached = false;
+const registeredSectionIds: { current: string[] } = { current: [] };
+
+function attachNavClickListener(sectionIds: string[]) {
+  registeredSectionIds.current = sectionIds;
+  if (navClickListenerAttached) return;
+  navClickListenerAttached = true;
+
+  const isSectionId = (id: string | null): id is string =>
+    Boolean(id && registeredSectionIds.current.includes(id));
+
+  const lockFromHref = (href: string | null) => {
+    const id = href ? getSectionIdFromHref(href) : null;
+    if (isSectionId(id)) navigationLockId = id;
+  };
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      const anchor = (event.target as Element).closest('a[href*="#"]');
+      if (!(anchor instanceof HTMLAnchorElement)) return;
+      lockFromHref(anchor.getAttribute("href"));
+    },
+    true,
+  );
+
+  window.addEventListener("hashchange", () => {
+    const hashId = window.location.hash
+      ? decodeURIComponent(window.location.hash.slice(1))
+      : null;
+    if (isSectionId(hashId)) navigationLockId = hashId;
+  });
+}
+
+function hasReachedLockedSection(
+  lockedId: string,
+  currentId: string | null,
+  sectionIds: string[],
+): boolean {
+  if (currentId === lockedId) return true;
+
+  const lastId = sectionIds[sectionIds.length - 1];
+  if (lockedId !== lastId) return false;
+
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const pageBottom = document.documentElement.scrollHeight;
+  return scrollBottom >= pageBottom - 2;
+}
+
 export function getSectionIdFromHref(href: string): string | null {
   const hashIndex = href.indexOf("#");
   if (hashIndex === -1) return null;
@@ -40,6 +91,10 @@ export function useScrollSpy({
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
 
   useEffect(() => {
+    attachNavClickListener(sectionIds);
+  }, [sectionIds]);
+
+  useEffect(() => {
     if (!enabled) return;
 
     let rafId: number | null = null;
@@ -65,6 +120,15 @@ export function useScrollSpy({
         } else {
           break;
         }
+      }
+
+      const lockedId = navigationLockId;
+      if (lockedId && sectionIds.includes(lockedId)) {
+        if (hasReachedLockedSection(lockedId, currentId, sectionIds)) {
+          navigationLockId = null;
+          setActiveSectionId((prev) => (prev === lockedId ? prev : lockedId));
+        }
+        return;
       }
 
       setActiveSectionId((prev) => (prev === currentId ? prev : currentId));
