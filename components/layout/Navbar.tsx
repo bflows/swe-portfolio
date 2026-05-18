@@ -1,12 +1,20 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 import Button from "../ui/Button";
+
+type NavIndicator = {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+  visible: boolean;
+};
 
 export const navLinks = [
   { href: "/#home", label: "Home" },
@@ -20,9 +28,57 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const navLinksContainerRef = useRef<HTMLDivElement | null>(null);
+  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [indicator, setIndicator] = useState<NavIndicator>({
+    left: 0,
+    top: 0,
+    width: 0,
+    height: 0,
+    visible: false,
+  });
 
   const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
   const { activeSectionId } = useScrollSpy({ sectionHrefs, activeSectionOffsetPx: ACTIVE_SECTION_OFFSET_PX, enabled: true });
+
+  const activeIndex = useMemo(
+    () => navLinks.findIndex(({ href }) => activeSectionId === getSectionIdFromHref(href)),
+    [activeSectionId],
+  );
+
+  const updateIndicator = useCallback(() => {
+    const activeEl = activeIndex >= 0 ? linkRefs.current[activeIndex] : null;
+    if (!activeEl) {
+      setIndicator((prev) => (prev.visible ? { ...prev, visible: false } : prev));
+      return;
+    }
+
+    setIndicator({
+      left: activeEl.offsetLeft,
+      top: activeEl.offsetTop,
+      width: activeEl.offsetWidth,
+      height: activeEl.offsetHeight,
+      visible: true,
+    });
+  }, [activeIndex]);
+
+  useLayoutEffect(() => {
+    updateIndicator();
+  }, [updateIndicator]);
+
+  useLayoutEffect(() => {
+    const container = navLinksContainerRef.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver(() => updateIndicator());
+    observer.observe(container);
+    window.addEventListener("resize", updateIndicator);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [updateIndicator]);
 
   useDismissInteraction({
     isActive: menuOpen,
@@ -39,20 +95,38 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: Nav Links */}
-          <div className="hidden items-center gap-x-1 md:flex">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`transition-colors duration-300 ease-in-out ${
-                  activeSectionId === getSectionIdFromHref(href)
-                    ? "text-p px-3 py-2 rounded-xl bg-primary/20 text-primary ring-1 ring-primary/40"
-                    : "text-p px-3 py-2 rounded-xl text-brand400 hover:bg-brand200/50 hover:text-brand600"
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+          <div ref={navLinksContainerRef} className="relative hidden items-center gap-x-1 md:flex">
+            <span
+              aria-hidden
+              className={`pointer-events-none absolute rounded-xl bg-primary/20 ring-1 ring-primary/40 transition-[left,top,width,height,opacity] duration-300 ease-in-out ${
+                indicator.visible ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                left: indicator.left,
+                top: indicator.top,
+                width: indicator.width,
+                height: indicator.height,
+              }}
+            />
+            {navLinks.map(({ href, label }, index) => {
+              const isActive = activeSectionId === getSectionIdFromHref(href);
+              return (
+                <Link
+                  key={href}
+                  ref={(el) => {
+                    linkRefs.current[index] = el;
+                  }}
+                  href={href}
+                  className={`relative z-10 text-p px-3 py-2 rounded-xl transition-colors duration-300 ease-in-out ${
+                    isActive
+                      ? "text-primary"
+                      : "text-brand400 hover:bg-brand200/50 hover:text-brand600"
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop: Other Links */}
