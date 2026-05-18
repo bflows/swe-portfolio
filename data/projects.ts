@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     desc: "Designed my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
     liveUrl: "https://billyf-portfolio.vercel.app/",
     githubUrl: "https://github.com/flowz0/swe-portfolio"
   },
