@@ -29,13 +29,15 @@ export default function ExperienceCard({
               </div>
             </div>
             <div className="hidden items-center gap-x-1 text-primary md:flex md:mt-2">
-                <div>
-                  <LuBuilding2 className="size-6" />
-                </div>
-                <p className="text-sm">
-                </p>{company}
+              <div>
+                <LuBuilding2 className="size-6" />
               </div>
-            <p className="mt-4 text-p line-clamp-4 text-brand600">{summary}</p>
+              <p className="text-sm">
+              </p>{company}
+            </div>
+            <p className="mt-4 text-p line-clamp-5 text-brand600">
+              {summary}
+            </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
@@ -50,9 +52,9 @@ export default function ExperienceCard({
         </div>
 
         <div
-          className={`absolute top-1/2 left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-300 ease-in-out md:left-1/2 ${
-            isActive ? "bg-primary" : "bg-primary/20"
-          }`}
+          className={`absolute top-1/2 left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-300 ease-in-out md:left-1/2 
+            ${isActive ? "bg-primary" : "bg-primary/20"}
+          `}
         />
       </div>
     </div>
