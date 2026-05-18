@@ -8,14 +8,6 @@ import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 import Button from "../ui/Button";
 
-type NavIndicator = {
-  left: number;
-  top: number;
-  width: number;
-  height: number;
-  visible: boolean;
-};
-
 export const navLinks = [
   { href: "/#home", label: "Home" },
   { href: "/#projects", label: "Projects" },
@@ -29,14 +21,8 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const navLinksContainerRef = useRef<HTMLDivElement | null>(null);
+  const indicatorRef = useRef<HTMLSpanElement | null>(null);
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-  const [indicator, setIndicator] = useState<NavIndicator>({
-    left: 0,
-    top: 0,
-    width: 0,
-    height: 0,
-    visible: false,
-  });
 
   const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
   const { activeSectionId } = useScrollSpy({ sectionHrefs, activeSectionOffsetPx: ACTIVE_SECTION_OFFSET_PX, enabled: true });
@@ -46,39 +32,40 @@ export default function Navbar() {
     [activeSectionId],
   );
 
-  const updateIndicator = useCallback(() => {
+  const positionIndicator = useCallback(() => {
+    const indicator = indicatorRef.current;
     const activeEl = activeIndex >= 0 ? linkRefs.current[activeIndex] : null;
+    if (!indicator) return;
+
     if (!activeEl) {
-      setIndicator((prev) => (prev.visible ? { ...prev, visible: false } : prev));
+      indicator.style.opacity = "0";
       return;
     }
 
-    setIndicator({
-      left: activeEl.offsetLeft,
-      top: activeEl.offsetTop,
-      width: activeEl.offsetWidth,
-      height: activeEl.offsetHeight,
-      visible: true,
-    });
+    indicator.style.left = `${activeEl.offsetLeft}px`;
+    indicator.style.top = `${activeEl.offsetTop}px`;
+    indicator.style.width = `${activeEl.offsetWidth}px`;
+    indicator.style.height = `${activeEl.offsetHeight}px`;
+    indicator.style.opacity = "1";
   }, [activeIndex]);
 
   useLayoutEffect(() => {
-    updateIndicator();
-  }, [updateIndicator]);
+    positionIndicator();
+  }, [positionIndicator]);
 
   useLayoutEffect(() => {
     const container = navLinksContainerRef.current;
     if (!container) return;
 
-    const observer = new ResizeObserver(() => updateIndicator());
+    const observer = new ResizeObserver(() => positionIndicator());
     observer.observe(container);
-    window.addEventListener("resize", updateIndicator);
+    window.addEventListener("resize", positionIndicator);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("resize", updateIndicator);
+      window.removeEventListener("resize", positionIndicator);
     };
-  }, [updateIndicator]);
+  }, [positionIndicator]);
 
   useDismissInteraction({
     isActive: menuOpen,
@@ -97,16 +84,9 @@ export default function Navbar() {
           {/* Desktop: Nav Links */}
           <div ref={navLinksContainerRef} className="relative hidden items-center gap-x-1 md:flex">
             <span
+              ref={indicatorRef}
               aria-hidden
-              className={`pointer-events-none absolute rounded-xl bg-primary/20 ring-1 ring-primary/40 transition-[left,top,width,height,opacity] duration-300 ease-in-out ${
-                indicator.visible ? "opacity-100" : "opacity-0"
-              }`}
-              style={{
-                left: indicator.left,
-                top: indicator.top,
-                width: indicator.width,
-                height: indicator.height,
-              }}
+              className="pointer-events-none absolute rounded-xl bg-primary/20 opacity-0 ring-1 ring-primary/40 transition-[left,top,width,height,opacity] duration-300 ease-in-out"
             />
             {navLinks.map(({ href, label }, index) => {
               const isActive = activeSectionId === getSectionIdFromHref(href);
