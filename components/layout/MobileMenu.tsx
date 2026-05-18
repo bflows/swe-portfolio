@@ -27,7 +27,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
   if (!isOpen) return null;
 
   return (
-    <div ref={menuRef} className="z-50 fixed left-4 right-4 top-25 px-6 py-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/90 border-brand200 shadow-brand100">
+    <div ref={menuRef} className="z-50 fixed left-4 right-4 top-25 px-6 py-6 rounded-4xl border backdrop-blur-lg shadow-2xl bg-brand100/90 border-brand200 shadow-brand100">
       <div
         className="flex flex-col gap-y-1"
         role="menu"
