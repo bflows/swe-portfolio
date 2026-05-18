@@ -18,8 +18,8 @@ export default function Experience() {
         <h2 className="text-h4 font-bold text-center bg-linear-to-r bg-clip-text text-transparent from-[#51f0e3] to-brand950 from-35% to-40% sm:text-h2 md:from-40% md:to-45%">
           Work Experience
         </h2>
-        <p className="text-brand800 text-p mt-4 text-center">
-          Experience building scalable systems and delivering practical software solutions.
+        <p className="text-brand800 text-p mt-4 max-w-xs mx-auto text-center">
+          What I&apos;ve done and where I&apos;ve done it.
         </p>
       </div>
       <div className="relative mt-12">
