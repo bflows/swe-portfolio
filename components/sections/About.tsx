@@ -35,12 +35,12 @@ export default function About() {
           About Me
         </h2>
       </div>
-      <div className="grid grid-cols-1 mt-4 md:gap-x-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 mt-4 md:gap-x-8 lg:grid-cols-2 lg:mt-8">
         <div>
-          <p className="text-p text-brand800">I&apos;m a full-stack software engineer with four years of experience building reliable and scalable software. I focus on developing practical solutions that solve real business problems utilizing clean architecture, maintainable code, and efficient systems.</p>
-          <p className="text-p mt-2 text-brand800">My work primarily involves building internal tools, dashboards, and APIs that help teams improve operations and make better use of their data. My passion is designing systems end-to-end and turning complex requirements into scalable web solutions.</p>
-          <p className="text-p mt-2 text-brand800">I&apos;m driven by the challenge of improving systems, simplifying workflows, and building software that delivers real value to the people who use it every day.</p>
-          <div className="mt-2 lg:mt-4">
+          <p className="text-p text-brand800">I&apos;m a full-stack software engineer with experience building web applications, internal tools, APIs, and business platforms. I enjoy turning complex ideas into simple products that people enjoy using.</p>
+          <p className="text-p mt-2 text-brand800 lg:mt-4">Most of my work focuses on backend systems, dashboards, and workflow tools that help businesses operate more efficiently and make better use of their data. I&apos;m really interested in system design, product development, and building software that solves practical problems.</p>
+          <p className="text-p mt-2 text-brand800 lg:mt-4">What drives me most is the process of taking an idea from concept to production, iterating on it, and continuously improving both the product and the engineering behind it.</p>
+          <div className="mt-4 lg:mt-6">
             {/* socials */}
             <div className="flex items-center gap-x-3">
               {socials.map((social, index) => (
@@ -57,7 +57,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-2 lg:mt-0">
+        <div className="mt-6 grid grid-cols-2 gap-2 lg:gap-4 lg:mt-0">
           {about.map((a, index) => (
             <AboutCard
               key={index}
