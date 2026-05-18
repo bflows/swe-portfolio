@@ -15,7 +15,7 @@ export default function ExperienceCard({
       <div key={`${company}-${title}`} className="relative">
         <div className="pl-4 md:pl-0">
           <article
-            className={`flex flex-col rounded-2xl border p-4 border-brand200 md:p-6 md:w-[calc(50%-2.5rem)] ${leftCol ? "md:mr-auto" : "md:ml-auto"
+            className={`flex flex-col rounded-2xl border p-4 bg-brand200/10 border-brand200 md:p-6 md:w-[calc(50%-2.5rem)] ${leftCol ? "md:mr-auto" : "md:ml-auto"
               }`}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-x-2">

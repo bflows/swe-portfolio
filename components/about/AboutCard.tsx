@@ -8,7 +8,7 @@ export default function AboutCard({
   textColor
 }: AboutCardProps) {
   return (
-    <div className="px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 w-full min-h-full flex flex-col items-center justify-center rounded-2xl bg-brand200/20">
+    <div className="px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 w-full min-h-full flex flex-col items-center justify-center rounded-2xl bg-brand200/10">
       <div className={`${bgColor} p-2 rounded-full`}>
         <Icon className={`${textColor} size-5 lg:size-6`} />
       </div>
