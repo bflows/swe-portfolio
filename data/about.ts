@@ -30,4 +30,4 @@ export const about: AboutCardProps[] = [
     bgColor: "bg-[#F8CFB1]/20",
     textColor: "text-[#F8CFB1]"
   },
-]; 
+];
