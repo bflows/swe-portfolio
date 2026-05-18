@@ -3,8 +3,8 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 0,
-    title: "HVAC Blog CMS",
-    desc: "Created a blog content management system for an HVAC company. Allows the company to post content, update posts, and manage their blog.",
+    title: "Content Management System",
+    desc: "Built a secure blog CMS for an HVAC company which enables employees to post content, manage posts, and appear in related Google search results.",
     status: "live",
     techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
     liveUrl: "https://www.ductdaddykc.com/blog",
@@ -12,8 +12,8 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Software Engineer Portfolio",
-    desc: "Designed and developed a responsive portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
+    title: "Portfolio Website",
+    desc: "Designed my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
     status: "live",
     techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel'],
     liveUrl: "https://billyf-portfolio.vercel.app/",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Field Service Platform",
-    desc: "Built a field-service platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
+    desc: "Enterprise suite featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
     status: "building",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     // liveUrl: "",
