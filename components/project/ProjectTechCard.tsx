@@ -5,13 +5,13 @@ type ProjectTechCardProps = {
   variant?: TechCardVariant;
 };
 
-const baseStyle = "px-3 py-1 text-small rounded-full w-fit border"
+const baseStyle = "px-3 py-1 text-small rounded-full w-fit"
 
 const variantStyles: Record<TechCardVariant, string> = {
   primary:
-    "text-brand800 bg-brand200/40 border-brand200",
+    "text-brand600 bg-brand200/20",
   secondary:
-    "text-brand400 bg-brand200/20 border-brand200/40"
+    "text-brand400 bg-brand200/10"
 };
 
 export default function ProjectTechCard({
