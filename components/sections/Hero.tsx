@@ -1,5 +1,6 @@
 import { LuChevronDown } from "react-icons/lu";
 import Button from "../ui/Button";
+import { HiArrowDown } from "react-icons/hi2";
 
 export default function Hero() {
   return (
@@ -18,8 +19,9 @@ export default function Hero() {
         <div className="mt-8 flex items-center justify-center gap-x-2 sm:gap-x-4">
           <Button href="/#projects">
             Explore Projects
+            <HiArrowDown className="size-5" />
           </Button>
-          <Button variant="secondary" href="/files/billy-flowers-resume.pdf" target="_blank">
+          <Button variant="secondary" href="/files/billy-flowers-resume.pdf" target="_blank" className="lg:hidden">
             View Resume
           </Button>
         </div>
