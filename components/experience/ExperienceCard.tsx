@@ -20,7 +20,7 @@ export default function ExperienceCard({
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-x-2">
               <h3 className="text-h6 font-semibold text-brand950">{title}</h3>
-              <div className="mt-2 flex items-center gap-x-1 text-brand600 md:mt-0">
+              <div className="mt-2 flex items-center gap-x-1 text-brand400 md:mt-0">
                 <div className="md:hidden">
                   <LuCalendar className="size-4" />
                 </div>
@@ -35,7 +35,7 @@ export default function ExperienceCard({
                 <p className="text-sm">
                 </p>{company}
               </div>
-            <p className="mt-4 text-p text-brand800">{summary}</p>
+            <p className="mt-4 text-p line-clamp-4 text-brand600">{summary}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
