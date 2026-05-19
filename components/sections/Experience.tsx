@@ -38,11 +38,7 @@ export default function Experience() {
                 }}
               >
                 <ExperienceCard
-                  title={experience.title}
-                  company={experience.company}
-                  date={experience.date}
-                  summary={experience.summary}
-                  tags={experience.tags}
+                  {...experience}
                   leftCol={isLeftColumn}
                   isActive={activeIndex === index}
                 />
