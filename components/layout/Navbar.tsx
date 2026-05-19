@@ -82,7 +82,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: Nav Links */}
-          <div ref={navLinksContainerRef} className="relative hidden items-center gap-x-1 md:flex">
+          <div ref={navLinksContainerRef} className="relative hidden items-center gap-x-2 md:flex">
             <span
               ref={indicatorRef}
               aria-hidden
