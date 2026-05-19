@@ -1,6 +1,6 @@
 import { ExperienceCardProps } from "@/types/experience";
-import Image from "next/image";
 import { LuBuilding2, LuCalendar } from "react-icons/lu";
+import ExperienceLogo from "./ExperienceLogo";
 
 export default function ExperienceCard({
   title,
@@ -33,13 +33,7 @@ export default function ExperienceCard({
             <div className="hidden items-center gap-x-3 text-primary md:flex md:mt-2">
               <div>
                 {img ? (
-                  <Image
-                    src={img}
-                    alt={`${company} logo`}
-                    width={32}
-                    height={32}
-                    className="h-8 w-8 object-contain rounded-full"
-                  />
+                  <ExperienceLogo src={img} alt={`${company} logo`} />
                 ) : (
                   <LuBuilding2 className="size-6" />
                 )}
