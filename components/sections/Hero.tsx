@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-dvh flex-col scroll-mt-64">
       <div className="hero-background" aria-hidden="true">
+        <div className="absolute inset-0 bg-linear-to-t from-brand100 via-20% via-brand100/0 to-brand100/0" />
       </div>
       <div className="relative z-10 flex flex-1 flex-col px-4 md:px-6">
         <div className="flex flex-1 flex-col items-center justify-center">
