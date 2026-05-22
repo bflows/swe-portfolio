@@ -30,8 +30,8 @@ const borderStyle: Record<RoundedVariant, string> = {
 };
 
 const sizeStyle: Record<SizeVariant, string> = {
-  sm: "py-2 px-3",
-  md: "py-3 px-5"
+  sm: "py-2 px-4",
+  md: "py-3 px-6"
 };
 
 export default function Button({
