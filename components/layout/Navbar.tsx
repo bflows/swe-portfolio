@@ -77,7 +77,7 @@ export default function Navbar() {
     <>
       <nav ref={navRef} className="fixed max-w-7xl mx-auto h-18 z-50 left-4 right-4 top-4 pl-8 pr-8 lg:pr-4 rounded-full border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
         <div className="flex items-center justify-between h-full">
-          <Link href="/#home" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
+          <Link href="/#home" className="text-brand950 text-h6 font-bold p-1 rounded-lg focus:outline-primary">
             Billy Flowers
           </Link>
 
