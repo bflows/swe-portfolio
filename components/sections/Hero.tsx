@@ -16,7 +16,7 @@ export default function Hero() {
             Software Engineer
           </h2>
           {/* Buttons */}
-          <div className="mt-8 flex items-center justify-center gap-x-2 sm:gap-x-4">
+          <div className="mt-8 flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:gap-x-4">
             <Button href="/#projects" rounded="full">
               Explore Projects
               <HiArrowDown className="size-5" />
