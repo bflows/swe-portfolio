@@ -18,7 +18,7 @@ Personal portfolio website built with **Next.js (App Router)**, **TypeScript**, 
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **UI**: React, Tailwind CSS
-- **Icons**: React Icons
+- **Icons**: React Icons (Lucide Icons)
 - **Tooling**: ESLint
 
 ## Site sections
