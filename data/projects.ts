@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Field Service Platform",
     desc: "Enterprise suite featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
-    status: "building",
+    status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     // liveUrl: "",
     githubUrl: "https://github.com/flowz0/d-enterprise-suite"
