@@ -4,6 +4,9 @@ import Link from "next/link";
 import { contactLinks, quickLinks } from "@/data/footer";
 
 export default function Footer() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <SectionContainer>
       <footer className="mb-12 w-full md:flex md:items-start md:justify-between lg:mb-16">
@@ -46,7 +49,7 @@ export default function Footer() {
             Designed with Figma and coded in Visual Studio Code. Built with Next.js and Tailwind CSS.
           </p>
           <p className="mt-20 text-p text-brand400">
-            © 2026 Billy Flowers. All rights reserved.
+            © {year} Billy Flowers. All rights reserved.
           </p>
         </div>
       </footer>
