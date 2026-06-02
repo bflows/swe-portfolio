@@ -25,7 +25,7 @@ export const projects: Project[] = [
     desc: "Enterprise suite featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
-    // liveUrl: "",
+    liveUrl: "https://www.builtbydaddy.com/",
     githubUrl: "https://github.com/flowz0/d-enterprise-suite"
   },
 ];
