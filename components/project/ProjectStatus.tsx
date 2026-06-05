@@ -34,7 +34,7 @@ export default function ProjectStatus({ status }: ProjectStatusProps) {
 
   return (
     <div
-      className={`px-3 py-1 flex items-center gap-x-2 rounded-full border ${className}`}
+      className={`px-3 py-1 flex items-center gap-x-2 rounded-full border transition-opacity duration-300 ease-in-out animate-pulse2 ${className}`}
     >
       <Icon className="size-4 shrink-0" aria-hidden />
       <p className="text-small">{label}</p>
