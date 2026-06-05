@@ -57,7 +57,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="mt-6 grid grid-cols-2 gap-2 lg:gap-4 lg:mt-0">
+        <div className="mt-6 grid sm:grid-cols-2 gap-2 lg:gap-4 lg:mt-0">
           {about.map((a, index) => (
             <AboutCard
               key={index}

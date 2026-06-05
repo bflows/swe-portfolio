@@ -8,16 +8,18 @@ export default function AboutCard({
   textColor
 }: AboutCardProps) {
   return (
-    <div className="px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 w-full min-h-full flex flex-col items-center justify-center rounded-2xl bg-brand200/10">
-      <div className={`${bgColor} p-2 rounded-full`}>
-        <Icon className={`${textColor} size-5 lg:size-6`} />
+    <div className="px-4 py-3 sm:px-6 sm:py-5 w-full min-h-full flex flex-row gap-x-4 items-center justify-start sm:flex-col sm:items-center sm:justify-center rounded-2xl bg-brand200/10">
+      <div className={`${bgColor} p-4 md:p-5 rounded-full`}>
+        <Icon className={`${textColor} size-6.5 md:size-7`} />
       </div>
-      <h3 className="text-p font-bold text-center mt-2 text-brand950 lg:text-h6 lg:mt-4">
-        {title}
-      </h3>
-      <p className="text-small mt-1 text-center text-brand800 lg:text-p lg:mt-2">
-        {desc}
-      </p>
+      <div>
+        <h3 className="text-p font-bold sm:text-center sm:mt-2 text-brand950 md:text-h6 md:mt-4">
+          {title}
+        </h3>
+        <p className="text-small mt-1 sm:text-center text-brand800 md:text-p md:mt-2">
+          {desc}
+        </p>
+      </div>
     </div>
   );
 }
