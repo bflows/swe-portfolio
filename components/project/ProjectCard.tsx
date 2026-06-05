@@ -22,24 +22,24 @@ export default function ProjectCard({
             </h3>
             <ProjectStatus status={status} />
           </div>
-          <p className="mt-2 text-p line-clamp-3 text-brand800">
+          <p className="mt-2 text-p line-clamp-4 text-brand800">
             {desc}
           </p>
           <ProjectTechList techStack={techStack} />
         </div>
         <div>
           <hr className="border-t-brand200 mt-6" />
-          <div className="mt-4 flex items-center justify-end gap-x-2">
+          <div className="mt-4 flex flex-col gap-y-2 sm:flex-row items-center sm:justify-end gap-x-2">
             {liveUrl && (
-              <Button href={liveUrl} target="_blank" rounded="full" size="sm" className="text-p">
+              <Button href={liveUrl} target="_blank" rounded="full" size="sm" className="text-p w-full sm:w-fit">
                 <div>
                   <LuPlay className="size-4" />
                 </div>
-                Live Demo
+                Live Project
               </Button>
             )}
             {githubUrl && (
-              <Button href={githubUrl} target="_blank" variant="secondary" rounded="full" size="sm" className="text-p">
+              <Button href={githubUrl} target="_blank" variant="secondary" rounded="full" size="sm" className="text-p w-full sm:w-fit">
                 <div>
                   <LuGithub className="size-4" />
                 </div>
