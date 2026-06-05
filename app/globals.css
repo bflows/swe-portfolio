@@ -64,4 +64,6 @@ body {
     linear-gradient(to right, rgba(52, 49, 53, 0.1) 1px, transparent 1px);
   background-size: 48px 48px;
   background-position: center center;
+  -webkit-mask-image: linear-gradient(to bottom, #1A191A 0%, transparent);
+  mask-image: linear-gradient(to bottom, #1A191A 0%, transparent);
 }
