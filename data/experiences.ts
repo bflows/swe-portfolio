@@ -6,7 +6,7 @@ import BVTLogo from "@/public/assets/bay_valley_tech_logo.jpg";
 
 export const experiences: ExperienceCardProps[] = [
     {
-      title: "Senior Software Engineer",
+      title: "Full Stack Software Engineer",
       company: "Liftmark",
       date: "Jun 2025 - Present",
       summary:
@@ -15,7 +15,7 @@ export const experiences: ExperienceCardProps[] = [
       img: LiftMarkLogo
     },
     {
-      title: "Software Engineer",
+      title: "Full Stack Software Engineer",
       company: "Duct Daddy",
       date: "Sep 2024 - May 2025",
       summary:
