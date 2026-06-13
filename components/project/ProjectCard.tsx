@@ -1,6 +1,6 @@
 import ProjectStatus from "./ProjectStatus";
 import ProjectTechList from "./ProjectTechList";
-import { LuGithub, LuPlay } from "react-icons/lu";
+import { LuGithub, LuLink } from "react-icons/lu";
 import { Project } from "@/types/project";
 import Button from "../ui/Button";
 
@@ -33,9 +33,9 @@ export default function ProjectCard({
             {liveUrl && (
               <Button href={liveUrl} target="_blank" rounded="full" size="sm" className="text-p w-full sm:w-fit">
                 <div>
-                  <LuPlay className="size-4" />
+                  <LuLink className="size-4" />
                 </div>
-                Live Project
+                Project Link
               </Button>
             )}
             {githubUrl && (
