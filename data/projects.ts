@@ -12,13 +12,22 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Blog Content Management System",
-    desc: "Built a business website, CMS, and online booking system for an HVAC company which led to a 300% revenue increase within six months.",
+    title: "Property Preservation Landing Page",
+    desc: "Designed and launched a responsive website that improves the company's online presence and generates customer inquiries.",
     status: "live",
-    techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
-    liveUrl: "https://www.ductdaddykc.com/blog",
-    githubUrl: "https://github.com/flows0/dd-platform"
+    techStack: ['Next.js', 'Tailwind CSS', 'Managed Hosting', 'Maintenance'],
+    liveUrl: "https://www.littletykeskc.com/",
+    githubUrl: "https://github.com/flows0/little-tykes"
   },
+  // {
+  //   id: 1,
+  //   title: "Blog Content Management System",
+  //   desc: "Built a business website, CMS, and online booking system for an HVAC company which led to a 300% revenue increase within six months.",
+  //   status: "live",
+  //   techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
+  //   liveUrl: "https://www.ductdaddykc.com/blog",
+  //   githubUrl: "https://github.com/flows0/dd-platform"
+  // },
   {
     id: 2,
     title: "Field Service Enterprise Suite",
