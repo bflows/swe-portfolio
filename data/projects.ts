@@ -3,13 +3,22 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 0,
-    title: "Software Engineer Portfolio Website",
-    desc: "Created my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
-    status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
-    liveUrl: "https://billyf-portfolio.vercel.app/",
-    githubUrl: "https://github.com/flows0/swe-portfolio"
+    title: "Text-based Social Media Platform",
+    desc: "Contributed to a full-stack agile software development team by building reusable UI components and REST API integrations.",
+    status: "archived",
+    techStack: ['JavaScript', 'React', 'Bulma CSS', 'Axios', 'Express', 'Node.js', 'MongoDB', 'Figma'],
+    // liveUrl: "https://billyf-portfolio.vercel.app/",
+    githubUrl: "https://github.com/FrancescaImmediato/dev-duckies-sm-proj-front"
   },
+  // {
+  //   id: 0,
+  //   title: "Software Engineer Portfolio Website",
+  //   desc: "Created my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
+  //   status: "live",
+  //   techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
+  //   liveUrl: "https://billyf-portfolio.vercel.app/",
+  //   githubUrl: "https://github.com/flows0/swe-portfolio"
+  // },
   {
     id: 1,
     title: "Property Preservation Landing Page",
