@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Backend",
-    skills: ["Express", "Node.js", "Prisma ORM", "REST APIs", "Authentication"],
+    skills: ["Express", "Node.js", "Prisma ORM", "REST APIs", "JSON Web Tokens"],
     Icon: LuServer,
     color: "#C3B1F8"
   },
@@ -34,7 +34,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Agile / Scrum"],
+    skills: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Notion", "Agile / Scrum"],
     Icon: LuWrench,
     color: "#F8DAB1"
   },
