@@ -13,7 +13,7 @@ export default function Skills() {
           The languages, libraries, frameworks, tools, and methodologies I use to build modern web solutions.
         </p>
       </div>
-      <div className="mt-6 -mx-4 flex items-stretch snap-x snap-mandatory overflow-x-auto scroll-px-4 px-4 pb-2 gap-x-2 gap-y-8 grid-cols-2 sm:px-6 sm:py-5 md:px-8 md:py-7 lg:mt-12 lg:grid-cols-3 sm:rounded-2xl sm:mx-0 sm:grid sm:scroll-px-0 sm:snap-none sm:items-stretch sm:gap-x-4 sm:bg-brand200/10">
+      <div className="mt-6 -mx-4 flex items-stretch snap-x snap-mandatory overflow-x-auto scroll-px-4 px-4 pb-2 gap-x-2 gap-y-8 grid-cols-2 sm:px-6 sm:py-5 md:px-8 md:py-7 lg:mt-12 lg:grid-cols-3 sm:rounded-2xl sm:mx-0 sm:grid sm:scroll-px-0 sm:snap-none sm:items-stretch sm:gap-x-4 sm:border sm:bg-brand200/10 sm:border-brand200/20">
         {skillCategories.map((skill, index) => (
           <div
             key={index}
