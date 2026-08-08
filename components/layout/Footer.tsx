@@ -17,7 +17,7 @@ export default function Footer() {
           <ul className="mt-4 flex flex-col gap-y-2">
             {quickLinks.map((link, index) => (
               <li key={index}>
-                <Link href={link.href} className="text-p text-brand600 transition-colors duration-300 ease-in-out hover:text-brand800" >
+                <Link href={link.href} className="text-p text-brand600 transition-colors duration-300 ease-in-out hover:text-primary" >
                   {link.title}
                 </Link>
               </li>
