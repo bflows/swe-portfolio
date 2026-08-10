@@ -21,16 +21,17 @@ export default function ExperienceCard({
               }`}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-x-2">
-              <h3 className="text-h6 font-semibold text-brand950 lg:text-h5">{title}</h3>
-              <div className="mt-2 flex items-center gap-x-1 text-brand400 md:mt-0 lg:w-1/3 lg:justify-end">
+              <h3 className="text-h6 font-semibold text-brand950">{title}</h3>
+              <div className="mt-2 flex items-center gap-x-2 text-brand400 md:mt-0 lg:w-1/3 lg:justify-end">
                 <div className="md:hidden">
                   <LuCalendar className="size-4" />
                 </div>
                 <p className="text-sm">
-                </p>{date}
+                  {date}
+                </p>
               </div>
             </div>
-            <div className="hidden items-center gap-x-3 text-primary md:flex md:mt-2">
+            <div className="flex items-center gap-x-3 text-primary mt-4">
               <div>
                 {img ? (
                   <ExperienceLogo src={img} alt={`${company} logo`} />
@@ -38,11 +39,11 @@ export default function ExperienceCard({
                   <LuBuilding2 className="size-6" />
                 )}
               </div>
-              <p className="text-p font-bold text-brand800 lg:text-h6">
+              <p className="text-p font-bold text-brand800">
                 {company}
               </p>
             </div>
-            <p className="mt-4 text-p line-clamp-8 text-brand600">
+            <p className="mt-2 text-p line-clamp-8 text-brand600">
               {summary}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
