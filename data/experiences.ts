@@ -1,21 +1,21 @@
 import { ExperienceCardProps } from "@/types/experience";
 
-import LiftMarkLogo from "@/public/images/liftmark-logo.png";
+import AscentStudioLogo from "@/public/images/ascent-studio-logo.png";
 import DuctDaddyLogo from "@/public/images/Duct-Daddy-logo.png";
 import BVTLogo from "@/public/images/bay_valley_tech_logo.jpg";
 
 export const experiences: ExperienceCardProps[] = [
     {
-      title: "Full Stack Software Engineer",
-      company: "Liftmark",
+      title: "Founder, Full Stack Software Engineer",
+      company: "Ascent Studio",
       date: "Jun 2025 - Present",
       summary:
         "Developed a system supporting scheduling, dispatching, payments, and CRM. Streamlined operations by replacing multiple third-party tools saving $5K annually and improving workflow coordination.",
       tags: ["TypeScript", "Express", "Next.js", "Prisma ORM", "PostgreSQL"],
-      img: LiftMarkLogo
+      img: AscentStudioLogo
     },
     {
-      title: "Full Stack Software Engineer",
+      title: "Full Stack Software Engineer | Contract",
       company: "Duct Daddy",
       date: "Sep 2024 - May 2025",
       summary:
@@ -24,7 +24,7 @@ export const experiences: ExperienceCardProps[] = [
       img: DuctDaddyLogo
     },
     {
-      title: "Software Engineer Intern",
+      title: "Frontend Software Engineer | Intern",
       company: "Bay Valley Tech",
       date: "Mar 2024 - Sep 2024",
       summary:
