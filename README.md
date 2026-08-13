@@ -1,4 +1,4 @@
-## Billy Flowers — Software Engineer Portfolio
+## Software Engineer Portfolio
 
 Personal portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. It’s designed to be fast, responsive, and easy to update. Most content lives in `data/` to easily ship changes without touching UI components.
 
