@@ -11,7 +11,7 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Real-time Chat App",
+    title: "Real-time Chat Application",
     desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
     status: "live",
     techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
