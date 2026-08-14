@@ -7,18 +7,8 @@ export const projects: Project[] = [
     desc: "Contributed to a full-stack agile software development team by building reusable UI components and REST API integrations.",
     status: "archived",
     techStack: ['JavaScript', 'React', 'Bulma CSS', 'Axios', 'Express', 'Node.js', 'MongoDB', 'Figma'],
-    // liveUrl: "https://billyf-portfolio.vercel.app/",
     githubUrl: "https://github.com/FrancescaImmediato/dev-duckies-sm-proj-front"
   },
-  // {
-  //   id: 0,
-  //   title: "Software Engineer Portfolio Website",
-  //   desc: "Created my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
-  //   status: "live",
-  //   techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
-  //   liveUrl: "https://billyf-portfolio.vercel.app/",
-  //   githubUrl: "https://github.com/flows0/swe-portfolio"
-  // },
   {
     id: 1,
     title: "Property Preservation Landing Page",
@@ -28,15 +18,6 @@ export const projects: Project[] = [
     liveUrl: "https://www.littletykeskc.com/",
     githubUrl: "https://github.com/flows0/little-tykes"
   },
-  // {
-  //   id: 1,
-  //   title: "Blog Content Management System",
-  //   desc: "Built a business website, CMS, and online booking system for an HVAC company which led to a 300% revenue increase within six months.",
-  //   status: "live",
-  //   techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
-  //   liveUrl: "https://www.ductdaddykc.com/blog",
-  //   githubUrl: "https://github.com/flows0/dd-platform"
-  // },
   {
     id: 2,
     title: "Field Service Enterprise Suite",
