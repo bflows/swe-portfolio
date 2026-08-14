@@ -11,12 +11,11 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Property Preservation Landing Page",
-    desc: "Designed and launched a responsive website that improves the company's online presence and generates customer inquiries.",
+    title: "Real-time Chat App",
+    desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
     status: "live",
-    techStack: ['Next.js', 'Tailwind CSS', 'Managed Hosting', 'Maintenance'],
-    liveUrl: "https://www.littletykeskc.com/",
-    githubUrl: "https://github.com/flows0/little-tykes"
+    techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
+    githubUrl: "https://github.com/flows0/chat-app"
   },
   {
     id: 2,
