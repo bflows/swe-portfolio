@@ -13,7 +13,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Real-time Chat Application",
     desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
-    status: "live",
+    status: "archived",
     techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
     githubUrl: "https://github.com/flows0/chat-app"
   },
