@@ -26,7 +26,7 @@ export const experiences: ExperienceCardProps[] = [
     {
       title: "Frontend Software Engineer",
       company: "Bay Valley Tech",
-      date: "Mar 2024 - Sep 2024",
+      date: "Mar 2024 - Mar 2025",
       summary:
       "Created a responsive React application with seamless navigation across devices and adaptive UI components. Integrated RESTful APIs for authentication and data handling in collaboration with backend teams.",
       tags: ["React", "JavaScript", "Figma", "UI/UX Design", "RESTful APIs"],
