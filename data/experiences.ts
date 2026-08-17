@@ -6,7 +6,7 @@ import BVTLogo from "@/public/images/bay_valley_tech_logo.jpg";
 
 export const experiences: ExperienceCardProps[] = [
     {
-      title: "Founder, Full Stack Software Engineer",
+      title: "Full Stack Software Engineer",
       company: "Ascent Studio",
       date: "Jun 2025 - Present",
       summary:
@@ -15,7 +15,7 @@ export const experiences: ExperienceCardProps[] = [
       img: AscentStudioLogo
     },
     {
-      title: "Full Stack Software Engineer | Contract",
+      title: "Full Stack Software Engineer",
       company: "Duct Daddy",
       date: "Sep 2024 - May 2025",
       summary:
@@ -24,7 +24,7 @@ export const experiences: ExperienceCardProps[] = [
       img: DuctDaddyLogo
     },
     {
-      title: "Frontend Software Engineer | Intern",
+      title: "Frontend Software Engineer",
       company: "Bay Valley Tech",
       date: "Mar 2024 - Sep 2024",
       summary:
