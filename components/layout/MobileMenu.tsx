@@ -103,7 +103,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
                   href="/files/billy-flowers-resume.pdf"
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="px-6 py-3 bg-primary/20 text-primary rounded-full flex items-center gap-x-2 w-fit outline-1 outline-primary/40"
+                  className="px-6 py-3 bg-primary/10 text-primary/80 rounded-full flex items-center gap-x-2 w-fit outline-1 outline-primary/20 transition-colors duration-300 ease-in-out hover:bg-primary/20 hover:text-primary hover:outline-primary/40"
                 >
                   <div>
                     <LuFileText className="size-6" />
