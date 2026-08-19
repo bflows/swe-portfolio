@@ -116,7 +116,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
                   href="https://www.linkedin.com/in/billyflowers/"
                   passHref
                   target="_blank"
-                  className="p-3 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/40 text-brand600 border-brand200"
+                  className="p-3 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
                 >
                   <div>
                     <BiLogoLinkedin className="size-6" />
@@ -129,7 +129,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
                   href="https://github.com/flows0"
                   passHref
                   target="_blank"
-                  className="p-3 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/40 text-brand600 border-brand200"
+                  className="p-3 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
                 >
                   <div>
                     <BiLogoGithub className="size-6" />
