@@ -88,7 +88,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
                   className={
                     activeSectionId === getSectionIdFromHref(href)
                       ? "text-p py-2 px-4 w-fit rounded-full bg-primary/20 text-primary ring-1 ring-primary/40"
-                      : "text-p py-2 px-4 w-fit rounded-full text-brand600 hover:bg-brand200"
+                      : "text-p py-2 px-4 w-fit rounded-full text-brand600 hover:bg-brand200 hover:text-brand800"
                   }
                   role="menuitem"
                 >
