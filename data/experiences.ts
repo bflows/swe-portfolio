@@ -8,7 +8,7 @@ export const experiences: ExperienceCardProps[] = [
     {
       title: "Full Stack Software Engineer",
       company: "Ascent Studio",
-      date: "Jun 2025 - Present",
+      date: "Nov. 2025 - Present",
       summary:
         "Developed a system supporting scheduling, dispatching, payments, and CRM. Streamlined operations by replacing multiple third-party tools saving $5K annually and improving workflow coordination.",
       tags: ["TypeScript", "Express", "Next.js", "Prisma ORM", "PostgreSQL"],
@@ -17,7 +17,7 @@ export const experiences: ExperienceCardProps[] = [
     {
       title: "Full Stack Software Engineer",
       company: "Duct Daddy",
-      date: "Sep 2024 - May 2025",
+      date: "Apr. 2025 - Oct. 2025",
       summary:
       "Built a custom CMS and marketing website enabling scalable content management. Integrated booking systems that helped drive revenue growth 300% in 6 months.",
       tags: ["TypeScript", "Next.js", "MongoDB", "Express", "Node.js"],
@@ -26,7 +26,7 @@ export const experiences: ExperienceCardProps[] = [
     {
       title: "Frontend Software Engineer",
       company: "Bay Valley Tech",
-      date: "Mar 2024 - Mar 2025",
+      date: "Mar. 2024 - Mar. 2025",
       summary:
       "Created a responsive React application with seamless navigation across devices and adaptive UI components. Integrated RESTful APIs for authentication and data handling in collaboration with backend teams.",
       tags: ["React", "JavaScript", "Figma", "UI/UX Design", "RESTful APIs"],
