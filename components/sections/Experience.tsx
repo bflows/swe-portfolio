@@ -18,9 +18,6 @@ export default function Experience() {
         <h2 className="text-h4 font-bold text-center bg-linear-to-r bg-clip-text text-transparent from-[#51f0e3] to-brand950 from-35% to-40% sm:text-h2 md:from-40% md:to-45%">
           Work Experience
         </h2>
-        <p className="text-brand800 text-p mt-2 max-w-xs mx-auto text-center lg:mt-4">
-          Roles, stacks, and what I shipped.
-        </p>
       </div>
       <div className="relative mt-6 lg:mt-12">
         <div className="absolute top-0 bottom-0 left-0 w-px bg-brand200 md:left-1/2 md:-translate-x-1/2" />
