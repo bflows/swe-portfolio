@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Field Service Enterprise Suite",
-    desc: "Unified platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
+    desc: "Unified platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, automated reminders, and employee workflows.",
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     liveUrl: "https://www.builtbydaddy.com/",
