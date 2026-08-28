@@ -28,7 +28,7 @@ export default function ProjectCard({
           <ProjectTechList techStack={techStack} />
         </div>
         <div>
-          <hr className="border-t-brand200 mt-6" />
+          <hr className="border-t-brand200/40 mt-6" />
           <div className="mt-4 flex flex-col gap-y-2 sm:flex-row items-center sm:justify-end gap-x-2">
             {liveUrl && (
               <Button href={liveUrl} target="_blank" rounded="full" size="sm" className="text-p w-full sm:w-fit">
