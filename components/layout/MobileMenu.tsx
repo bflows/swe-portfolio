@@ -72,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
       {isOpen && (
         <motion.div
           ref={menuRef}
-          className="z-50 fixed left-4 right-4 top-22.5 overflow-hidden rounded-4xl border backdrop-blur-lg shadow-2xl bg-brand100/90 border-brand200 shadow-brand100"
+          className="z-50 fixed left-4 right-4 top-22.5 overflow-hidden rounded-4xl border backdrop-blur-lg bg-brand100/80 border-brand200"
           initial="hidden"
           animate="visible"
           exit="exit"
