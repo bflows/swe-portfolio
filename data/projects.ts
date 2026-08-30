@@ -15,7 +15,7 @@ export const projects: Project[] = [
     desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
     status: "archived",
     techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
-    githubUrl: "https://github.com/flows0/chat-app"
+    githubUrl: "https://github.com/bflows/chat-app"
   },
   {
     id: 2,
@@ -24,6 +24,6 @@ export const projects: Project[] = [
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     liveUrl: "https://www.builtbydaddy.com/",
-    githubUrl: "https://github.com/flows0/d-enterprise-suite"
+    githubUrl: "https://github.com/bflows/d-enterprise-suite"
   },
 ];
