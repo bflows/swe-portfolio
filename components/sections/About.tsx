@@ -14,7 +14,7 @@ export default function About() {
       <p className="text-h4 font-bold mt-4 text-brand600 sm:text-h2 lg:mt-6">
         I&apos;m currently 👀 for a full stack role <span className="text-brand950">building</span> solutions that make an <span className="text-brand950">impact</span>. Got something you want to <span className="text-brand950">talk</span> about? Connect with me on {" "}
         <Link href={"https://www.linkedin.com/in/billyflowers/"} target="_blank" className="cursor-pointer group">
-          <FaLinkedin className="inline h-8 w-auto text-brand950 transition-all duration-300 ease-in-out sm:h-12 group-hover:-translate-y-0.5 hover:text-primary" />
+          <FaLinkedin className="inline h-8 w-auto transition-all duration-300 ease-in-out text-primary sm:h-12 group-hover:-translate-y-0.5 hover:text-brand950" />
         </Link>.
       </p>
     </SectionContainer>
