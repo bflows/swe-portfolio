@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 export default function About() {
   return (
     <SectionContainer id="about">
-      <h2 className="text-p font-bold bg-linear-to-r bg-clip-text text-transparent from-brand950 to-[#51f0e3] from-5% to-20% sm:text-h6 md:from-0% md:to-5%">
+      <h2 className="text-p font-bold bg-linear-to-r bg-clip-text text-primary sm:text-h6">
         About Me
       </h2>
       <p className="text-h4 font-bold mt-6 text-brand600 sm:text-h2 lg:mt-12">
