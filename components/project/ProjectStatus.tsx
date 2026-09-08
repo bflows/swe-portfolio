@@ -11,17 +11,17 @@ const STATUS: Record<
   building: {
     label: "Building",
     Icon: LuCircleDotDashed,
-    className: "text-building bg-brand200/10 border-building/40",
+    className: "text-building bg-brand200/80 border-building/40",
   },
   live: {
     label: "Live",
     Icon: LuRadio,
-    className: "text-primary bg-brand100/10 border-primary/40",
+    className: "text-primary bg-brand100/80 border-primary/40",
   },
   archived: {
     label: "Archived",
     Icon: LuArchive,
-    className: "text-brand600 bg-brand100/10 border-brand300",
+    className: "text-brand600 bg-brand100/80 border-brand300",
   },
 };
 
@@ -34,10 +34,12 @@ export default function ProjectStatus({ status }: ProjectStatusProps) {
 
   return (
     <div
-      className={`px-3 py-1 flex items-center gap-x-2 rounded-full border transition-opacity duration-300 ease-in-out animate-pulse2 ${className}`}
+      className={`px-3 py-1 w-fit absolute top-2 right-2 rounded-full border ${className}`}
     >
-      <Icon className="size-4 shrink-0" aria-hidden />
-      <p className="text-small">{label}</p>
+      <div className="transition-opacity duration-300 ease-in-out animate-pulse2 flex items-center gap-x-2">
+        <Icon className="size-4 shrink-0" aria-hidden />
+        <p className="text-small">{label}</p>
+      </div>
     </div>
   );
 }
