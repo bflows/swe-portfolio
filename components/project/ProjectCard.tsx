@@ -3,10 +3,12 @@ import ProjectTechList from "./ProjectTechList";
 import { LuExternalLink, LuGithub } from "react-icons/lu";
 import { Project } from "@/types/project";
 import Button from "../ui/Button";
+import Image from "next/image";
 
 export default function ProjectCard({
   title,
   desc,
+  img,
   status,
   techStack,
   liveUrl,
@@ -16,12 +18,25 @@ export default function ProjectCard({
     <div className="px-6 py-5 rounded-2xl border transition-transform duration-300 ease-in-out bg-brand200/10 border-brand200/20 hover:-translate-y-2 lg:px-7 lg:py-6">
       <div className="flex flex-col justify-between h-full">
         <div>
-          <div className="flex items-start justify-between gap-x-2">
-            <h3 className="text-h6 font-bold text-brand950 lg:text-h5">
-              {title}
-            </h3>
+          <div className="relative">
             <ProjectStatus status={status} />
           </div>
+          {img ? (
+            <Image
+              src={img}
+              className="w-full h-48 object-cover rounded-lg"
+              alt={`${title} project image`}
+              loading="lazy"
+              draggable={false}
+            />
+          ) : (
+            <div className="w-full h-48 rounded-lg flex items-center justify-center bg-brand200/20">
+              <p className="text-p text-brand400">Image coming soon...</p>
+            </div>
+          )}
+          <h3 className="text-h6 font-bold mt-4 text-brand950 lg:text-h5">
+            {title}
+          </h3>
           <p className="mt-2 text-p line-clamp-5 text-brand800">
             {desc}
           </p>
