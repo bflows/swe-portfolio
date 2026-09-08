@@ -1,4 +1,6 @@
 import { Project } from "@/types/project";
+import FieldServiceProjectImg from "@/public/images/enterprise-suite-img.png";
+import RTChatProjectImg from "@/public/images/rt-chat-app-img.png";
 
 export const projects: Project[] = [
   {
@@ -13,6 +15,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Real-time Chat Application",
     desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
+    img: RTChatProjectImg,
     status: "archived",
     techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
     githubUrl: "https://github.com/bflows/chat-app"
@@ -21,6 +24,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Field Service Enterprise Suite",
     desc: "Unified platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, automated reminders, and employee workflows.",
+    img: FieldServiceProjectImg,
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     liveUrl: "https://www.builtbydaddy.com/",
