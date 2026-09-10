@@ -17,7 +17,7 @@ export const projects: Project[] = [
     desc: "Built a full-stack real-time chat application that enables secure messaging, image sharing, and persistent conversations.",
     img: RTChatProjectImg,
     status: "archived",
-    techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL'],
+    techStack: ['TypeScript', 'React', 'Express', 'Node.js', 'Socket.IO', 'PostgreSQL', 'JSON Web Tokens'],
     githubUrl: "https://github.com/bflows/chat-app"
   },
   {
