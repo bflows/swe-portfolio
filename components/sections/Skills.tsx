@@ -7,7 +7,7 @@ export default function Skills() {
     <SectionContainer id="skills">
       <div>
         <h2 className="text-h4 font-bold text-center text-brand950 sm:text-h2">
-          <span className="text-primary">Skills</span> & Technologies
+          <span className="text-primary">Skills</span> & Tech
         </h2>
         <p className="text-brand800 text-p mt-2 text-center max-w-77 mx-auto lg:mt-4">
           Languages, libraries, frameworks, and tools I use to build modern web solutions.
