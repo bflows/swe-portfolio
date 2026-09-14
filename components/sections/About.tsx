@@ -12,7 +12,7 @@ export default function About() {
         I first started <span className="text-brand950">coding</span> by modding my favorite games. Since then I&apos;ve became a full stack <span className="text-brand950">software engineer</span> capable of building scalable systems end-to-end.
       </p>
       <p className="text-h4 font-bold mt-4 text-brand600 sm:text-h2 lg:mt-6">
-        I&apos;m currently 👀 for a full stack role <span className="text-brand950">building</span> solutions that make an <span className="text-brand950">impact</span>. Got something you want to <span className="text-brand950">talk</span> about? Connect with me on {" "}
+        I&apos;m currently looking for a full stack role <span className="text-brand950">building</span> solutions that make an <span className="text-brand950">impact</span>. Got something you want to <span className="text-brand950">talk</span> about? Connect with me on {" "}
         <Link href={"https://www.linkedin.com/in/billyflowers/"} target="_blank" className="cursor-pointer group">
           <FaLinkedin className="inline h-8 w-auto transition-all duration-300 ease-in-out text-primary sm:h-12 group-hover:-translate-y-0.5 hover:text-brand950" />
         </Link>.
