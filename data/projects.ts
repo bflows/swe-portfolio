@@ -5,7 +5,7 @@ import RTChatProjectImg from "@/public/images/rt-chat-app-img.png";
 export const projects: Project[] = [
   {
     id: 0,
-    title: "Text-based Social Media Platform",
+    title: "Social Media Platform",
     desc: "Contributed to a full-stack agile software development team by building reusable UI components and REST API integrations.",
     status: "archived",
     techStack: ['JavaScript', 'React', 'Bulma CSS', 'Axios', 'Express', 'Node.js', 'MongoDB', 'Figma'],
