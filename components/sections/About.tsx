@@ -13,7 +13,7 @@ export default function About() {
       </p>
       <p className="text-h4 font-bold mt-4 text-brand600 sm:text-h2 lg:mt-6">
         I&apos;m now a full stack <span className="text-brand950">developer</span> capable of building scalable systems end-to-end. I&apos;m looking for a role to <span className="text-brand950">build</span> solutions that make an impact. Got something you want to talk about? Connect with me on <Link href={"https://www.linkedin.com/in/billyflowers/"} target="_blank" className="cursor-pointer group">
-          <FaLinkedin className="inline h-8 w-auto text-brand950 transition-all duration-300 ease-in-out sm:h-12 group-hover:-translate-y-0.5 hover:text-primary" />
+          <FaLinkedin className="inline h-8 w-auto text-primary transition-all duration-300 ease-in-out sm:h-12 group-hover:-translate-y-0.5 hover:text-brand950" />
         </Link>.
       </p>
     </SectionContainer>
