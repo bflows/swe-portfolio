@@ -54,7 +54,7 @@ export default function ExperienceCard({
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-small rounded-full ring bg-primary/20 text-primary ring-primary/40"
+                  className="px-3 py-1 text-small rounded-full ring bg-brand200/40 text-brand600 ring-brand200/80"
                 >
                   {tag}
                 </span>
